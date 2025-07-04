@@ -1,0 +1,8 @@
+# Variáveis do ambiente
+.env
+
+# Node modules
+node_modules
+
+# Relatórios de testes
+coverage/
