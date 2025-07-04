@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test_ci": "jest --runInBand --detectOpenHandles --reporters=default --reporters=jest-html-reporter"
   },
   "repository": {
     "type": "git",
