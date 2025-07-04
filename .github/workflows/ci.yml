@@ -27,7 +27,7 @@ jobs:
           echo "BASE_URL=${{ secrets.BASE_URL }}" >> .env
 
       - name: 🚀 Executar testes com Jest
-        run: npm test_ci
+        run: npm run test_ci
 
       - name: 📎 Upload do relatório HTML
         uses: actions/upload-artifact@v4
