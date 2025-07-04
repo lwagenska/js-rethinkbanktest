@@ -1,0 +1,36 @@
+name: CI - Testes Automatizados
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🔄 Clonar repositório
+        uses: actions/checkout@v3
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: 📦 Instalar dependências
+        run: npm ci
+
+      - name: 🔐 Criar arquivo .env
+        run: |
+          echo "BASE_URL=${{ secrets.BASE_URL }}" >> .env
+
+      - name: 🚀 Executar testes com Jest
+        run: npm test_ci
+
+      - name: 📎 Upload do relatório HTML
+        uses: actions/upload-artifact@v3
+        with:
+          name: relatorio-testes
+          path: tests/report-html
