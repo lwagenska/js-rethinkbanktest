@@ -127,7 +127,9 @@ Arquivo de configuração:
 ```
 #### 📄 Relatório de Testes (HTML)
 
-Após a execução da pipeline (mesmo com falhas), o relatório pode ser acessado no repositório de artefatos ou localmente em:
+Ao final da execução dos testes, um relatório em HTML é gerado automaticamente, contendo um resumo visual de todos os testes executados, seus status e detalhes de falhas (se houver).
+
+Esse relatório pode ser acessado no repositório de artefatos da pipeline ou localmente em:
 
 ```bash
 coverage/test-report.html
