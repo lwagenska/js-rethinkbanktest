@@ -49,10 +49,10 @@ O projeto também contempla:
 
 #### 📊 Se houver bugs, classifique-os em nível de criticidade
 
-| Bug                                                    | Criticidade |
-|--------------------------------------------------------|-------------|
-| Depósito sem refletir no saldo da caixinha             | **Alta**    |
-| Mensagem divergente entre documentação e API           | **Baixa**   |
+| Bug                                                                                      | Criticidade |
+|------------------------------------------------------------------------------------------|-------------|
+| Depósito na caixinha não reflete no saldo da caixinha (`piggy_bank_balance`)             | **Alta**    |
+| Documentação inconsistente                                                               | **Média**   |
 
 #### 🚀 Diante do cenário, o sistema está pronto para subir em produção?
 
@@ -77,6 +77,7 @@ node_modules/
 .env
 coverage/
 ```
+
 Esses arquivos são específicos do ambiente local ou gerados automaticamente e não devem ser versionados.
 
 ---
@@ -91,6 +92,7 @@ cd js-rethinkbanktest
 ---
 
 ## 📦 Instalação
+
 ```bash
 npm install
 ```
@@ -98,6 +100,7 @@ npm install
 ---
 
 ## 🚀 Rodando os Testes
+
 ```bash
 npm test
 ```
@@ -108,15 +111,29 @@ npm test nomeDoArquivo.test.js
 
 ---
 
-## 🧾 Evidências de Execução
+## ⚙️ Integração Contínua com GitHub Actions
 
-Os testes automatizados geram evidências em formato de relatório HTML através do [Jest HTML Reporters](https://www.npmjs.com/package/jest-html-reporters).
+O projeto está configurado com **GitHub Actions**, responsável por:
 
-Após a execução dos testes, o relatório será salvo automaticamente em:
+- Instalar dependências (`npm ci`)
+- Executar todos os testes automatizados
+- Gerar evidências em HTML com [jest-html-reporters](https://www.npmjs.com/package/jest-html-reporters)
+- Salvar o artefato com os relatórios de execução
+
+Arquivo de configuração:
+
 ```bash
-./coverage/test-report.html
+.github/workflows/ci.yml
 ```
-Abra diretamente no navegador para visualizar.
+#### 📄 Relatório de Testes (HTML)
+
+Após a execução da pipeline (mesmo com falhas), o relatório pode ser acessado no repositório de artefatos ou localmente em:
+
+```bash
+coverage/test-report.html
+```
+
+💡 **Dica**: esse relatório está no `.gitignore` e é gerado apenas em tempo de execução.
 
 ---
 
@@ -132,23 +149,23 @@ Abra diretamente no navegador para visualizar.
 ## 🗃️ Estrutura dos testes
 ```bash
 __tests__/
-├── __account__/
+├── account/
 │   ├── account.delete.test.js           # Exclusão de conta
 │   └── account.delete.error.test.js     # Exclusão de conta - erros
-├── __auth__/
+├── auth/
 │   ├── login.success.test.js            # Login com sucesso
 │   ├── login.error.test.js              # Login com erro
 │   ├── signup.success.test.js           # Cadastro com sucesso
 │   ├── signup.error.test.js             # Cadastro com erro
 │   └── signup.confirm-email.test.js     # Confirmação de e-mail
-├── __piggybank__/
+├── piggybank/
 │   ├── piggybank.deposit.test.js        # Depósito na caixinha
 │   ├── piggybank.deposit.error.test.js  # Depósito na caixinha - erros
 │   ├── piggybank.withdraw.test.js       # Resgate da caixinha
 │   ├── piggybank.withdraw.error.test.js # Resgate da caixinha - erros
 │   ├── piggybank.extract.test.js        # Consulta de extrato
 │   └── piggybank.extract.error.test.js  # Consulta de extrato - erros
-├── __points__/
+├── points/
 │   ├── sendPoints.test.js               # Envio de pontos
 │   └── sendPoints.error.test.js         # Envio de pontos - erros
 utils/
