@@ -1,5 +1,5 @@
-const createTestUser = require('../../utils/createTestUser');
-const api = require('../../utils/apiClient');
+const createTestUser = require('../../__utils__/createTestUser');
+const api = require('../../__utils__/apiClient');
 
 describe('Caixinha - Resgate (positivo)', () => {
     // ⚠️ Este teste está falhando devido a um bug no endpoint /caixinha/deposit,

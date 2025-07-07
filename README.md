@@ -127,7 +127,9 @@ Arquivo de configuração:
 ```
 #### 📄 Relatório de Testes (HTML)
 
-Após a execução da pipeline (mesmo com falhas), o relatório pode ser acessado no repositório de artefatos ou localmente em:
+Ao final da execução dos testes, um relatório em HTML é gerado automaticamente, contendo um resumo visual de todos os testes executados, seus status e detalhes de falhas (se houver).
+
+Esse relatório pode ser acessado no repositório de artefatos da pipeline ou localmente em:
 
 ```bash
 coverage/test-report.html
@@ -168,7 +170,7 @@ __tests__/
 ├── points/
 │   ├── sendPoints.test.js               # Envio de pontos
 │   └── sendPoints.error.test.js         # Envio de pontos - erros
-utils/
+__utils__/
 ├── apiClient.js                         # Instância Axios com base URL
 ├── createTestUser.js                    # Utilitário para criação de usuário
 └── buildUser.js                         # Geração de dados dinâmicos para usuário
@@ -179,3 +181,5 @@ utils/
 ## 🙋‍♂️ Autor
 
 Desenvolvido por Lucas Wagenska como parte de um teste técnico.
+[🔗 Repositório no GitHub](https://github.com/lwagenska/js-rethinkbanktest)
+

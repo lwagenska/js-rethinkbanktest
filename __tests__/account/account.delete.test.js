@@ -1,5 +1,5 @@
-const api = require('../../utils/apiClient');
-const createTestUser = require('../../utils/createTestUser');
+const api = require('../../__utils__/apiClient');
+const createTestUser = require('../../__utils__/createTestUser');
 
 describe('Conta Bancária - Exclusão (positivos)', () => {
     jest.setTimeout(15000);

@@ -1,5 +1,5 @@
-const createTestUser = require('../../utils/createTestUser');
-const api = require('../../utils/apiClient');
+const createTestUser = require('../../__utils__/createTestUser');
+const api = require('../../__utils__/apiClient');
 
 describe('Caixinha - Resgate (negativos)', () => {
     it('deve falhar ao tentar resgatar sem token', async () => {

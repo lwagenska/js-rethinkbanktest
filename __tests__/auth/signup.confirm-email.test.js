@@ -1,5 +1,5 @@
-const api = require('../../utils/apiClient');
-const buildUser = require('../../utils/buildUser');
+const api = require('../../__utils__/apiClient');
+const buildUser = require('../../__utils__/buildUser');
 
 describe('Signup - Confirmação de Email', () => {
     it('deve confirmar o email com sucesso com um token válido', async () => {
