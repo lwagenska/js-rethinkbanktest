@@ -1,5 +1,5 @@
-// const createTestUser = require('../../utils/createTestUser');
-const api = require('../../utils/apiClient');
+// const createTestUser = require('../../__utils__/createTestUser');
+const api = require('../../__utils__/apiClient');
 
 describe('Caixinha - Extrato (negativo)', () => {
   it('deve falhar ao tentar acessar o extrato sem token', async () => {

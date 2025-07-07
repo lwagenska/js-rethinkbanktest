@@ -1,5 +1,5 @@
-const api = require('../../utils/apiClient');
-const buildUser = require('../../utils/buildUser');
+const api = require('../../__utils__/apiClient');
+const buildUser = require('../../__utils__/buildUser');
 
 describe('Login - Cenários positivos', () => {
     let user;

@@ -168,7 +168,7 @@ __tests__/
 ├── points/
 │   ├── sendPoints.test.js               # Envio de pontos
 │   └── sendPoints.error.test.js         # Envio de pontos - erros
-utils/
+__utils__/
 ├── apiClient.js                         # Instância Axios com base URL
 ├── createTestUser.js                    # Utilitário para criação de usuário
 └── buildUser.js                         # Geração de dados dinâmicos para usuário
@@ -179,3 +179,5 @@ utils/
 ## 🙋‍♂️ Autor
 
 Desenvolvido por Lucas Wagenska como parte de um teste técnico.
+[🔗 Repositório no GitHub](https://github.com/lwagenska/js-rethinkbanktest)
+

@@ -1,6 +1,6 @@
-const api = require('../../utils/apiClient');
+const api = require('../../__utils__/apiClient');
 const { faker } = require('@faker-js/faker');
-const buildUser = require('../../utils/buildUser');
+const buildUser = require('../../__utils__/buildUser');
 
 describe('Signup - cenários negativos', () => {
     it('Deve retornar erro ao tentar cadastrar com CPF inválido', async () => {

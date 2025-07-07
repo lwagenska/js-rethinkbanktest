@@ -1,6 +1,6 @@
-const api = require('../../utils/apiClient');
-const buildUser = require('../../utils/buildUser');
-const createTestUser = require('../../utils/createTestUser');
+const api = require('../../__utils__/apiClient');
+const buildUser = require('../../__utils__/buildUser');
+const createTestUser = require('../../__utils__/createTestUser');
 
 describe('Login - Cenários negativos', () => {
   it('deve falhar ao tentar logar com e-mail inexistente', async () => {
