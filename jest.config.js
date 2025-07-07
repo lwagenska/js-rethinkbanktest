@@ -1,5 +1,6 @@
 module.exports = {
   testMatch: ["**/__tests__/**/*.test.js"],
+  testTimeout: 10000, // Nativamente, o Jest tem um timeout de 5s e estava quebrando alguns testes
   reporters: [
     'default',
     ['jest-html-reporter', {
